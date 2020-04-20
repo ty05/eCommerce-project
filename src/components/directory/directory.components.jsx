@@ -15,6 +15,7 @@ function Directory(){
                 title={section.title}
                 imagUrl={section.imageUrl}
                 size={section.size}
+                linkUrl={section.linkUrl}
                 ></MenuItem>
             ))}
         </div>
