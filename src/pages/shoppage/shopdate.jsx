@@ -190,15 +190,15 @@ const SHOP_DATA = [
         {
           id: 24,
           name: 'Floral Blouse',
-          // imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
-          imageUrl: "/images/shop-img/womens/floral-blouse.png",
+          imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
+          // imageUrl: "/images/shop-img/womens/floral-blouse.png",
           price: 20
         },
         {
           id: 25,
           name: 'Floral Dress',
-          // imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
-          imageUrl: "/images/shop-img/womens/floral-skirt.png",
+          imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
+          // imageUrl: "/images/shop-img/womens/floral-skirt.png",
           price: 80
         },
         {
@@ -253,22 +253,22 @@ const SHOP_DATA = [
         {
           id: 32,
           name: 'Black & White Longsleeve',
-          // imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
-          imageUrl: "/images/shop-img/mens/long-sleeve.png",
+          imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+          // imageUrl: "/images/shop-img/mens/long-sleeve.png",
           price: 25
         },
         {
           id: 33,
           name: 'Pink T-shirt',
-          // imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
-          imageUrl: "/images/shop-img/mens/pink-shirt.png",
+          imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+          // imageUrl: "/images/shop-img/mens/pink-shirt.png",
           price: 25
         },
         {
           id: 34,
           name: 'Jean Long Sleeve',
-          // imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
-          imageUrl: "/images/shop-img/mens/roll-up-jean-shirt.png",
+          imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+          // imageUrl: "/images/shop-img/mens/roll-up-jean-shirt.png",
           price: 40
         },
         {
