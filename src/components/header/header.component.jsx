@@ -17,12 +17,16 @@ function Header({users}){
                 <Link className='option' to='/shop'>
                     Contact
                 </Link>
-                {
-                    users ?
-                    <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
-                    :
-                    <Link className='option' to='/signup'>SIGN IN</Link>
-                }
+                 
+                { users ? (
+                    <Link as='div' onClick={() => auth.signOut()}>
+                        SIGN OUT
+                    </Link>
+                    ) : (
+                    <Link to='/signup'>
+                    <span>SIGN IN </span>
+                    </Link>
+                )}
             </div>
         </div>
     )
