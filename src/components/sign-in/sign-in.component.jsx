@@ -31,12 +31,12 @@ function SignIn () {
     
     }
 
-    
+    console.log(info)
+    console.log(info.email)
 
     async function handleSubmit(event) {
         event.preventDefault();
         
-
         try{
             await auth.signInWithEmailAndPassword(info.email, info.password);
             setInfo({ email: '', password: '' });
@@ -44,10 +44,8 @@ function SignIn () {
             console.log('something wrong', error);
         }
 
-        
     }
 
-    
     return(
         <div className='sign-in'>
             <h2>I already ahve an account</h2>
