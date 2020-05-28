@@ -10,7 +10,6 @@ const CartIcon = () => {
     const dispatch = useDispatch()
     const toggle = useSelector(state=>state.cart)
     
-    console.log(ToggleCartHidden)
 
 
     return(

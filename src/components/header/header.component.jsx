@@ -12,8 +12,8 @@ function Header(){
 
     const hidden = useSelector(state => state.cart);
     const currentUser = useSelector(state => state.user);
-    
-    console.log(hidden);
+
+
     
 
     return(
