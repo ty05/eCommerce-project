@@ -6,13 +6,14 @@ import { auth } from '../../firebase/firebase.utils';
 import CartIcon  from '../../components/cart-icon/cart-icon.components';
 import CartDropDown from '../../components/cart-dropdown/cart-dropdown.components';
 import {useSelector} from 'react-redux';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selector';
 
 
 function Header(){
 
-    const hidden = useSelector(state => state.cart);
-    const currentUser = useSelector(state => state.user);
-
+    const hidden = useSelector(selectCartHidden);
+    const currentUser = useSelector(selectCurrentUser);
 
     
 
@@ -28,7 +29,7 @@ function Header(){
                 <Link className='option' to='/contact'>
                     Contact
                 </Link>
-                { (currentUser.currentUser !== null ) ? (
+                { (currentUser !== null ) ? (
                     <Link as='div' onClick={() => auth.signOut()}>
                         SIGN OUT
                     </Link>
@@ -40,7 +41,7 @@ function Header(){
                 <CartIcon />
             </div>
             {
-                hidden.hidden ? null : <CartDropDown />
+                hidden ? false : <CartDropDown />
             }
         </div>
     )

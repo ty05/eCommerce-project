@@ -8,6 +8,8 @@ import SignInandSignup from './pages/sign-in-and-sign-up/signup.components';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.action';
+import CheckOutPage from './pages/checkout/checkout.components';
+
 
 
 
@@ -44,6 +46,7 @@ function App() {
 
   },[]);
   
+  
 
 
   return (
@@ -51,7 +54,8 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/shop' component={ShopPage} />
+        <Route path='/shop' component={ShopPage} />
+        <Route exact path='/checkout' component={CheckOutPage} />
         <Route exact path='/signup' render={() => (user.users !== null) ? (<Redirect to ='/' />) : (<SignInandSignup />)}/>
       </Switch>
     </div>

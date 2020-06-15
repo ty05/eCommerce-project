@@ -8,10 +8,9 @@ import { useSelector, useDispatch } from 'react-redux';
 function CollectionItem({ item }) {
 
     const dispatch = useDispatch();
-    const items = useSelector(state => state.cart);
+    
     const { name, price, imageUrl } = item;
 
-  
 
     return(
         <div className='collection-item'>
