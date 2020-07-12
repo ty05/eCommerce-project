@@ -5,12 +5,12 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import ShopPage from './pages/shoppage/shoppage.component';
 import Header from './components/header/header.component';
 import SignInandSignup from './pages/sign-in-and-sign-up/signup.components';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument, addCollectionAndDocuments } from './firebase/firebase.utils';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.action';
 import CheckOutPage from './pages/checkout/checkout.components';
-
-
+// import { selectShopItems } from './redux/shop/shop.selector';
+ 
 
 
 function App() {
@@ -20,6 +20,8 @@ function App() {
   });
 
   const currentUser = useSelector(state => state.user);
+  // const collectionsArray = useSelector(selectShopItems);
+
   
   const dispatch = useDispatch()
 
@@ -38,6 +40,7 @@ function App() {
       }
       setUser({users:userAuth});
       dispatch(setCurrentUser(userAuth));
+      // addCollectionAndDocuments('collections', collectionsArray.map(({ title, items}) => ({title, items })))
     });
 
     return () => {

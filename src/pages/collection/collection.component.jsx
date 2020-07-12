@@ -8,7 +8,7 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 const CollectioPage =({match}) => {
     // const shops = useSelector(state => state.shop)
     const cateId = useSelector(selectCollection(match.params.categoryId));
-    console.log(cateId);
+
 
     return (
         <div className='collection-page'>

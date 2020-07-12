@@ -15,10 +15,10 @@ const CheckOutPage = () => {
         <div className='checkout-page'>
             <div className='checkout-header'>
                 <div className='checkout-block'>
-                    <span>Product</span>
+                    <span> </span>
                 </div>
                 <div className='checkout-block'>
-                    <span>Description</span>
+                    <span>Product</span>
                 </div>
                 <div className='checkout-block'>
                     <span>Quantity</span>
@@ -30,14 +30,28 @@ const CheckOutPage = () => {
                     <span>Remove</span>
                 </div>
             </div>
-            {
+            
+                {
                 cartItems.map(cartItem => (
                     <CheckoutItem key={cartItem.id} cartItem={cartItem} />
                 ))}
+           
             <div className='total'>
                 <span>Total: ${cartPrice}</span>
             </div>
-            <StripeCheckoutButton price = {cartPrice} />
+            
+            <div className='pay'>
+                <StripeCheckoutButton price = {cartPrice} />
+            </div>
+            
+            <div className='test-warning'>
+                *Please use th3 following test credit card for payment*
+                <br/>
+                4242 4242 4242 4242 - EXP:01/21 - CVV: 123
+            </div>
+
+
+            
         </div>
     )
 }

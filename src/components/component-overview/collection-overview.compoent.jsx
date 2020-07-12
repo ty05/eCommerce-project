@@ -9,6 +9,8 @@ const CollectionOverview = () => {
 
     const shopItems = useSelector(selectShopItems);
 
+    console.log(shopItems)
+
 
     return(
         <div className='shop-page'>
